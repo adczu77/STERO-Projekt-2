@@ -1,0 +1,12 @@
+plugins: 
+  - {name: static_map,       type: "costmap_2d::StaticLayer"} 
+  - {name: inflation_layer,  type: "costmap_2d::InflationLayer"}
+
+publish_frequency: 1.0
+static_map: true
+robot_radius: 0.26
+always_send_full_costmap: true
+
+inflation_layer:
+  inflation_radius: 0.5
+  cost_scaling_factor: 5.0

@@ -1,0 +1,8 @@
+obstacle_range: 2.5 # w takiej odleglosci przeszkoda zostanie wstawiona do costmap
+raytrace_range: 3.0 # robot nie bedzie chcial miec przeszkod w takiej odleglosci przed soba
+
+
+robot_radius: 0.5
+
+inflation_radius: 0.7
+

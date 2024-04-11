@@ -1,0 +1,19 @@
+plugins: 
+    - {name: obstacles,        type: "costmap_2d::VoxelLayer"}
+    - {name: inflation_layer,  type: "costmap_2d::InflationLayer"}
+
+
+publish_frequency: 1.0
+
+rolling_window: true
+
+
+robot_radius: 0.26
+obstacles:
+    observation_sources: base_scan
+    base_scan: {data_type: LaserScan, sensor_frame: base_laser_link, clearing: true, marking: true, topic: /scan_raw}
+
+inflation_layer:
+  enabled:              true
+  cost_scaling_factor:  3.0  
+  inflation_radius:     0.05

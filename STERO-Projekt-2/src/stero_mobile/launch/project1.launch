@@ -1,0 +1,25 @@
+<launch>
+    <arg name="bok" default="1.0" />
+    <param name="/bok" value="$(arg bok)" />
+
+    <arg name="kierunek" default="-" />
+    <param name="/kierunek" value="$(arg kierunek)" />
+
+    <arg name="profil" default="s" />
+    <param name="/profil" value="$(arg profil)" />
+
+    <arg name="v" default="1.0" />
+    <param name="/v" value="$(arg v)" />
+
+    <arg name="w" default="0.5" />
+    <param name="/w" value="$(arg w)" />
+
+    <arg name="a" default="0.05" />
+    <param name="/a" value="$(arg a)" />
+
+    <node name="package" pkg="stero_mobile_init" type="package" output="screen">
+    </node>
+
+    <node name="error" pkg="stero_mobile_init" type="error" output="screen">
+    </node>
+</launch>

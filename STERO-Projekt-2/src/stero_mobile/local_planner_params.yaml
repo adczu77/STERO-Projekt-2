@@ -1,0 +1,62 @@
+  max_trans_vel: 0.8       
+  min_trans_vel: 0.05      
+
+  max_vel_x: 0.3
+  min_vel_x: 0.05  
+
+  max_vel_y: 0 
+  min_vel_y: 0  
+
+  max_rot_vel: 0.3 
+  min_rot_vel: 0.0  
+
+  acc_lim_theta: 1.0  # 3.2 
+  acc_lim_x: 1 
+  acc_lim_y: 0   
+  acc_lim_trans: 1.0   
+
+# Goal Tolerance Parameters
+  yaw_goal_tolerance: 0.15   # 0.05
+  xy_goal_tolerance: 0.2    # 0.10
+  dwa: false
+
+
+# Forward Simulation Parameters
+  sim_time: 2.0  # ile sekund do przodu sumulujemy ruch robota ?
+
+  # Liczby próbek używanych przy przeszukiwaniu przestrzeni prędkości podczas symulacji w DWA
+  vx_samples: 5
+  vy_samples: 0   
+  vtheta_samples: 15  
+
+  meter_scoring: true   # odległość do celu wyrażona jest w METRACH
+  penalize_negative_x: false 
+
+# Oscillation Prevention Parameters
+  oscillation_reset_dist: 0.05   # robot musi pokonać 5cm, aby flaga oscylacji została wyczyszczona
+
+# Debugging
+  publish_traj_pc : true #wyświetlanie ścieżki z planera lokalnego 
+  publish_cost_grid_pc: true
+  global_frame_id: map
+
+# Is this existing?
+  sim_granularity: 0.025  # odległość pomiędzy koljnymi punktami generowanej trajektorii   
+  goal_distance_bias: 2.0   
+  path_distance_bias: 10.0   # jak bardzo planer localny ma trzymać się globalnej ścieżki
+  occdist_scale: 0.3 # jak bardzo kontroler ma unikać przeszkód ?   
+  stop_time_buffer: 0.8    
+
+
+  # forward_point_distance: 0.000 
+  # Nie są wykorzystywane: https://answers.ros.org/question/315487/dwa-local-planner-parameters-are-never-used/
+  scaling_speed: 0.25           
+  max_scaling_factor: 0.2       
+
+
+  # Prędkości dla których uważamy, że robot się zatrzymał kiedy dotarł do celu
+  # Brane pod uwage na samym końcu drogi, kiedy robot ma się za moment zatrzymać
+  rot_stopped_vel: 0.01 
+  trans_stopped_vel: 0.01
+
+  #holonomic_robot: false # tiago ma napęd różnicowy
